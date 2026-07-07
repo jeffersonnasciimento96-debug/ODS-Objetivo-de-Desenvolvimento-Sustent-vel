@@ -1,75 +1,54 @@
-# React + TypeScript + Vite
+ODS Plataforma — Trabalho Decente e Crescimento Econômico
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Seção 1 — Sobre o projeto
 
-Currently, two official plugins are available:
+CampoDescriçãoNome do projetoODS PlataformaODS escolhidaODS 8 — Trabalho Decente e Crescimento EconômicoNome do alunoJefferson NascimentoObjetivo do projetoPlataforma web que conecta pessoas a oportunidades reais de aprendizagem, trabalho e empreendedorismo, promovendo inclusão produtiva e cidadã. Oferece trilhas de capacitação, vagas de emprego, mentoria, microcrédito, guia MEI e serviços para quem quer crescer com autonomia.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+Seção 2 — Como rodar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Pré-requisitos
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Node.js instalado
+MySQL instalado e rodando
+npm instalado
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Banco de dados
 
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Abra seu cliente MySQL (ex: MySQL Workbench, DBeaver, phpMyAdmin)
+Execute o script SQL:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+banco/banco.sql
 
-```
+
+Back-end
+
+bash# Entre na pasta do backend
+cd backend
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor
+node server.js
+
+O servidor vai rodar em: http://localhost:3001
+
+
+Front-end
+
+bash# Entre na pasta do projeto React
+cd meu-projeto-react
+
+# Instale as dependências
+npm install
+
+# Inicie o front-end
+npm run dev
+
+O front-end vai rodar em: http://localhost:5173
